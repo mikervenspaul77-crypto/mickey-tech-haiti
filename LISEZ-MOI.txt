@@ -1,0 +1,37 @@
+MICKEY TECH — VERSION STRUCTURE D'ORIGINE CONSERVÉE
+
+Ce dossier garde la structure du site HTML que vous avez envoyé :
+- disposition des sections Accueil, Pourquoi choisir, Produits, Contact, Pied de page ;
+- fond noir, or, animations d'origine, style des cartes, filtres et panier latéral.
+
+Catalogue actuel : références transmises par la boutique, rangées par marque et par type :
+- Téléphones ;
+- Écrans ;
+- Flex de charge ;
+- Tablettes.
+
+Les prix n'ont pas été publiés. Le site recherche des photos réelles correspondant au modèle sur Wikimedia Commons pour les références visibles, puis affiche la source, l'auteur et la licence.
+Quand aucune image fiable n'est trouvée, la fiche garde « Photo à ajouter » et propose une recherche manuelle. Les résultats illustrent un modèle et ne confirment pas le stock réel.
+La boutique doit vérifier les références, les stocks, les variantes et les prix avant publication commerciale.
+
+Fichiers modifiables :
+  index.html     = structure et couleurs de votre site initial + ajout de fenêtre produit
+  catalogue.js   = noms, marques, descriptions et chemins des images
+  app.js         = filtres, recherches, panier, fiches et interactions
+  CREDITS_IMAGES.md = crédits des photos utilisées dans l'ancienne sélection de démonstration
+
+Pour consulter : extraire le ZIP, ouvrir index.html dans Chrome, Edge ou Firefox.
+L'affichage des photos exige Internet : liens vers Wikimedia Commons.
+Il ne s'agit pas d'une vraie vue 4D/360° : c'est un effet de profondeur/zoom avec plusieurs angles quand ces photos existent.
+Il ne s'agit pas d'un site déployé en ligne ni d'un système de paiement activé.
+Pour un site commercial complet il faudra confirmer les prix, stocks, coordonnées exactes,
+conditions de vente, photos du stock, et connecter les fournisseurs de paiements avec sécurité serveur.
+
+Pour ajouter des photos : déposez-les dans images/ puis ajoutez leur chemin dans images:[] pour la référence correspondante dans catalogue.js.
+Exemple : images:['images/galaxy-a16.jpg'].
+
+Le catalogue est construit à partir des entrées INVENTORY dans catalogue.js.
+Chaque entrée indique [marque, type, libellé, liste des modèles séparés par |].
+Types utilisés : phones, screens, charging-flex, tablets.
+Pour renseigner un prix confirmé plus tard, ajouter price: nombre dans la fiche générée par le catalogue ; l'affichage actuel indique les montants en HTG.
+Les boutons Facebook/YouTube restent volontairement non actifs tant que leurs liens ne sont pas connus.

@@ -1,0 +1,36 @@
+IMAGES DU SITE MICKEY TECH
+
+Déposez ici vos photos au format JPG, PNG ou WEBP. Noms conseillés :
+
+Produit                              Fichier conseillé
+iPhone 15 Pro                       iphone-15-pro-1.jpg
+Galaxy S24 Ultra                    galaxy-s24-ultra-1.jpg
+Redmi Note 12                       redmi-note-12-1.jpg
+Moto G24                            moto-g24-1.jpg
+TECNO Camon 40 Pro 5G               tecno-camon-40-pro-1.jpg
+itel A50                            itel-a50-1.jpg
+Téléphone itel à touches            itel-touches-1.jpg
+Oukitel WP6                         oukitel-wp6-1.jpg
+Google Pixel 8                      pixel-8-1.jpg
+AirPods Pro                         airpods-pro-2-1.jpg
+Apple Watch                         apple-watch-1.jpg
+Câble USB-C                         cable-usbc-1.jpg
+Batterie externe                    powerbank-1.jpg
+Casque filaire Koss                 casque-koss-1.jpg
+Antenne Starlink                    starlink-dish-1.jpg
+
+Pour ajouter une deuxième vue, utilisez le même nom avec -2 avant l’extension.
+Exemple : iphone-15-pro-2.jpg
+
+Après avoir déposé la photo, modifiez la propriété images du produit dans
+catalogue.js. Exemple pour l’iPhone 15 Pro :
+
+images:['images/iphone-15-pro-1.jpg','images/iphone-15-pro-2.jpg']
+
+Gardez seulement les fichiers que vous avez réellement déposés dans le dossier.
+Les photos en ligne actuelles restent visibles jusqu’à ce que vous remplaciez
+leurs noms dans catalogue.js. Enregistrez puis actualisez index.html.
+
+La première image est celle de la fiche produit. Les images suivantes sont
+proposées dans la galerie. Utilisez des photos dont vous possédez les droits
+ou l’autorisation d’utilisation.

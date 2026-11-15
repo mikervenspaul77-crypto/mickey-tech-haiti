@@ -1,0 +1,24 @@
+MICKEY TECH — OUVRIR ET MODIFIER LE SITE SUR UN TELEPHONE
+
+TRANSFERER LE PROJET
+1. Envoyez MICKEY_TECH_SMARTPHONE.zip sur Google Drive, WhatsApp (comme document) ou par câble USB.
+2. Sur le téléphone, téléchargez le ZIP puis extrayez-le dans un dossier.
+3. Gardez ensemble index.html, styles.css, app.js, catalogue.js et le dossier images.
+
+OUVRIR LE SITE
+- Android : ouvrez index.html depuis un navigateur ou depuis l'aperçu intégré de votre éditeur de code.
+- iPhone/iPad : enregistrez et extrayez le ZIP dans Fichiers. Pour tester correctement les fichiers liés (CSS et JavaScript), utilisez l'aperçu Web local d'un éditeur compatible ou hébergez le site. L'aperçu direct de Fichiers/Safari peut bloquer certains fichiers locaux.
+- Une connexion Internet est nécessaire pour les polices, les icônes et les photos recherchées sur Wikimedia Commons.
+
+MODIFIER LE SITE
+- catalogue.js : modèles, marques, types et prix à compléter. Les prix doivent être ajoutés seulement s'ils sont confirmés.
+- styles.css : couleurs, tailles et mise en page.
+- app.js : filtres, panier, favoris et interactions. Modifier avec prudence.
+- images/ : photos de la boutique. Ajouter un chemin images/nom-du-fichier.jpg à l'article correspondant dans catalogue.js.
+- index.html : structure des sections. Garder les références vers styles.css, catalogue.js et app.js.
+
+CONSEILS
+- Faites une copie du dossier avant les modifications importantes.
+- Après une modification, enregistrez puis actualisez l'aperçu.
+- Pour partager une version modifiée, recréez un ZIP contenant tout le dossier du site.
+- Le site est actuellement statique : les comptes, stocks et commandes ne sont pas synchronisés avec un serveur.

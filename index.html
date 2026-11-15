@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="MICKEY TECH Haïti — smartphones, accessoires et produits technologiques. Découvrez les références et contactez notre boutique.">
+  <title>Mickey Tech Haïti | Smartphones Premium - Port-au-Prince</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="bg-animation"></div>
+  <div class="particles" id="particles"></div>
+
+  <!-- Owner Photo Badge -->
+  <div class="owner-badge" data-action="owner-info">
+    <span class="owner-mark" aria-label="Mickey Tech">MT</span>
+    <span class="owner-tooltip">MICKEY TECH — Boutique</span>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <nav>
+      <div class="logo">
+        <i class="fas fa-mobile-alt"></i>
+        Mickey Tech
+      </div>
+      <div class="nav-center">
+        <a href="#home" class="nav-link active">Accueil</a>
+        <a href="#products" class="nav-link">Produits</a>
+        <a href="#features" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Rechercher un téléphone..." id="searchInput">
+          
+        </div>
+        <button class="icon-btn" data-action="wishlist">
+          <i class="fas fa-heart"></i>
+        </button>
+        <button class="icon-btn cart-btn" data-action="cart">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="icon-btn account-btn" data-action="account" title="Mon compte" aria-label="Ouvrir mon compte">
+          <i class="fas fa-user"></i>
+        </button>
+        <button class="icon-btn menu-btn" data-action="menu">
+  <i class="fas fa-bars"></i>
+</button>
+      </div>
+    
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>Bienvenue chez <span>Mickey Tech Haïti</span></h1>
+        <p>Découvrez des smartphones et accessoires de grandes marques dans notre boutique. Consultez les photos des modèles et contactez-nous pour confirmer les prix et disponibilités.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-value">Plusieurs</div>
+            <div class="stat-label">Marques à explorer</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">Photos</div>
+            <div class="stat-label">De modèles réels</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">Contact</div>
+            <div class="stat-label">WhatsApp</div>
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" data-action="scroll-products">
+            <i class="fas fa-shopping-bag"></i> Découvrir nos produits
+          </button>
+          <a href="https://wa.me/50939068588" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <i class="fab fa-whatsapp"></i> +509 3906-8588
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Samsung_Galaxy_S24_Ultra.jpg?width=1100"
+          alt="Photographie réelle d’un Samsung Galaxy S24 Ultra (image illustrative, stock à confirmer)">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="section-header">
+      <h2>Pourquoi Choisir <span>Mickey Tech</span> ?</h2>
+      <p>Excellence et professionnalisme au service de vos besoins technologiques en Haïti</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shipping-fast"></i>
+        </div>
+        <h3>Livraison sur demande</h3>
+        <p>Contactez-nous pour connaître les zones desservies, les délais et les frais de livraison.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Informations et conditions</h3>
+        <p>Nous vous communiquons les conditions applicables à chaque article avant la commande.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-undo"></i>
+        </div>
+        <h3>Vérification des articles</h3>
+        <p>Vérifiez votre article avant de finaliser l’achat. Conditions précisées lors de la commande, selon la loi applicable.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-hand-holding-usd"></i>
+        </div>
+        <h3>Paiements possibles</h3>
+        <p>MonCash, NatCash et autres modes à confirmer directement avec la boutique avant tout paiement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section" id="products">
+    <div class="section-header">
+      <h2>Nos <span>Produits</span></h2>
+      <p>Explorez les marques et ouvrez un article pour consulter ses photographies, ses détails et demander sa disponibilité.</p>
+    </div>
+
+    <div class="filters">
+      <div class="catalog-filter-section">
+        <span class="catalog-filter-label">Type de produit</span>
+        <div class="filter-group" id="categoryFilters" aria-label="Filtrer par type de produit"></div>
+      </div>
+      <div class="catalog-filter-section">
+        <span class="catalog-filter-label">Marque</span>
+        <div class="filter-group" id="brandFilters" aria-label="Filtrer par marque"></div>
+      </div>
+      <select class="sort-select" id="sortSelect">
+        <option value="newest">Sélection</option>
+        <option value="name">Nom (A–Z)</option>
+        <option value="brand">Marque (A–Z)</option>
+      </select>
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Rechercher..." id="productSearch">
+      </div>
+    </div>
+
+    <div class="products-grid" id="productsGrid"></div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="features contact-section" id="contact">
+    <div class="section-header">
+      <h2>Contactez-<span>Nous</span></h2>
+      <p>Visitez-nous à Port-au-Prince ou contactez-nous pour toute question</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Notre Adresse</h3>
+        <p>Mais-Gâté, Port-au-Prince<br>Haïti (adresse exacte à confirmer)</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <h3>Téléphone</h3>
+        <p><a href="https://wa.me/50939068588" target="_blank" rel="noopener noreferrer" class="contact-link">WhatsApp : +509 3906-8588</a></p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Réseaux sociaux</h3>
+        <p><a href="https://www.instagram.com/mikervensmikervens" target="_blank" rel="noopener noreferrer" class="contact-link">Instagram</a> · <a href="https://www.tiktok.com/@mikervens03" target="_blank" rel="noopener noreferrer" class="contact-link">TikTok</a></p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <h3>Horaires</h3>
+        <p>Horaires à confirmer sur WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo">
+          <i class="fas fa-mobile-alt"></i>
+          Mickey Tech
+        </div>
+        <p>Votre partenaire de confiance pour les smartphones premium en Haïti. Contact direct avec la boutique pour vos achats de produits technologiques.</p>
+        <div class="social-links">
+          <a href="#" title="Facebook : lien à ajouter" aria-label="Facebook (à configurer)" data-action="facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/mikervensmikervens" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/50939068588" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.tiktok.com/@mikervens03" target="_blank" rel="noopener noreferrer" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Marques</h4>
+        <ul>
+          <li><a href="#">Apple iPhone</a></li>
+          <li><a href="#">Samsung Galaxy</a></li>
+          <li><a href="#">Xiaomi</a></li>
+          <li><a href="#">OnePlus</a></li>
+          <li><a href="#">Google Pixel</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Livraison</a></li>
+          <li><a href="#">WhatsApp</a></li>
+          <li><a href="#contact">Assistance</a></li>
+          <li><a href="#contact">Renseignements produits</a></li>
+          <li><a href="#">Accessoires</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Conditions de vente</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024-2026 Mickey Tech Haïti. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" data-action="cart"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-cart"></i> Votre Panier</h3>
+      <button class="close-cart" data-action="cart">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <p>Votre panier est vide</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Sous-total</span>
+          <span id="subtotal">0 HTG</span>
+        </div>
+        <div class="summary-row">
+          <span>Livraison</span>
+          <span>À confirmer</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <span id="cartTotal">0 HTG</span>
+        </div>
+      </div>
+      <button class="checkout-btn" data-action="checkout">
+        <i class="fab fa-whatsapp"></i> Demander la disponibilité
+      </button>
+      <p class="footer-note">
+        MonCash, NatCash et autres moyens à confirmer avec la boutique.
+      </p>
+    </div>
+  </aside>
+
+
+  <dialog class="account-dialog" id="accountDialog" aria-labelledby="accountTitle">
+    <div class="account-header">
+      <div>
+        <p class="account-eyebrow">MICKEY TECH</p>
+        <h2 id="accountTitle">Mon compte</h2>
+      </div>
+      <button class="detail-close" id="accountClose" type="button" aria-label="Fermer mon compte">×</button>
+    </div>
+    <div class="account-content">
+      <p class="account-intro" id="accountGreeting">Retrouvez vos informations et votre sélection.</p>
+      <div class="account-stats" aria-label="Résumé du compte">
+        <div><strong id="accountFavoriteCount">0</strong><span>Favoris</span></div>
+        <div><strong id="accountCartCount">0</strong><span>Articles sélectionnés</span></div>
+        <div><strong id="accountCartTotal">À confirmer</strong><span>Montant estimé</span></div>
+      </div>
+      <form id="accountForm" class="account-form">
+        <h3>Mes coordonnées</h3>
+        <div class="account-fields">
+          <label>Nom complet<input name="name" autocomplete="name" maxlength="80" placeholder="Votre nom"></label>
+          <label>Téléphone<input name="phone" type="tel" autocomplete="tel" maxlength="30" placeholder="+509 ..."></label>
+          <label>Adresse e-mail<input name="email" type="email" autocomplete="email" maxlength="120" placeholder="vous@exemple.com"></label>
+          <label>Ville ou quartier<input name="area" autocomplete="address-level2" maxlength="80" placeholder="Ex. Port-au-Prince"></label>
+        </div>
+        <button class="btn btn-primary account-save" type="submit"><i class="fas fa-save"></i> Enregistrer mes coordonnées</button>
+      </form>
+      <div class="account-actions">
+        <button class="account-action" type="button" data-action="account-favorites"><i class="fas fa-heart"></i><span>Retrouver mes favoris</span><i class="fas fa-arrow-right"></i></button>
+        <button class="account-action" type="button" data-action="account-cart"><i class="fas fa-shopping-bag"></i><span>Ouvrir ma sélection</span><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <div class="account-privacy"><i class="fas fa-lock"></i><p>Ces coordonnées sont enregistrées uniquement dans ce navigateur. Ce site ne crée pas de compte en ligne et ne synchronise pas vos données.</p></div>
+      <button class="account-clear" id="accountClear" type="button">Effacer mes coordonnées enregistrées</button>
+    </div>
+  </dialog>
+
+  <!-- Fiche produit détaillée : ajout dans la structure existante, sans refaire le site -->
+  <dialog class="detail-dialog" id="productDialog" aria-labelledby="detailTitle">
+    <div class="detail-top"><strong>MICKEY TECH / DÉTAIL PRODUIT</strong><button class="detail-close" id="detailClose" type="button" aria-label="Fermer la fiche">×</button></div>
+    <div id="productDetail"></div>
+  </dialog>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="catalogue.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
