@@ -6,7 +6,7 @@
  const $=(s,root=document)=>root.querySelector(s);
  const $$=(s,root=document)=>[...root.querySelectorAll(s)];
  const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const KEY='mickey-original-cart-v2',WISH='mickey-original-wish-v2',ACCOUNT='mickey-account-profile-v1',PHOTO_CACHE='mickey-commons-photo-cache-v2';
+ const KEY='mickey-original-cart-v2',WISH='mickey-original-wish-v2',ACCOUNT='mickey-account-profile-v1',PHOTO_CACHE='mickey-commons-photo-cache-v2',THEME='mickey-color-mode-v1';
  const read=(key,fallback)=>{try {const v=JSON.parse(localStorage.getItem(key));return v??fallback;}catch{return fallback;}};
  const save=(key,v)=>{try{localStorage.setItem(key,JSON.stringify(v));}catch{showToast('Stockage local indisponible','error');}};
  const saveCart=()=>save(KEY,cart);
@@ -20,6 +20,8 @@
  cart=cart.filter(i=>products.some(p=>p.id===i.id)&&Number.isInteger(i.qty)&&i.qty>0);
  let wishlist=read(WISH,[]);if(!Array.isArray(wishlist))wishlist=[];
  let profile=read(ACCOUNT,{});if(!profile||typeof profile!=='object'||Array.isArray(profile))profile={};
+ let colorMode=read(THEME,'night');if(!['day','night'].includes(colorMode))colorMode='night';
+ document.documentElement.dataset.theme=colorMode;
  let photoCache=read(PHOTO_CACHE,{});if(!photoCache||typeof photoCache!=='object'||Array.isArray(photoCache))photoCache={};
  const photoRequests=new Set();let photoQueue=[],photoRequestsActive=0;
  let currentFilter='all',currentCategory='all',currentSort='newest',search='',onlyFavs=false,detailProduct=null,photoIndex=0;
@@ -154,7 +156,7 @@
      <div class="product-info"><div class="product-brand">${esc(p.brand)}</div>
      <h3 class="product-name"><button class="product-name-btn" data-open="${esc(p.id)}">${esc(p.name)}</button></h3>
     <p class="product-note">${photoNote(p)}</p>
-     <div class="product-specs">${p.series?`<span class="spec-tag">${esc(p.series)}</span>`:''}<span class="spec-tag">${esc(p.label||'Technologie')}</span></div>
+    <div class="product-specs">${p.series&&p.series!==p.label?`<span class="spec-tag">${esc(p.series)}</span>`:''}<span class="spec-tag">${esc(p.label||p.series||'Technologie')}</span></div>
      <div class="product-footer"><div class="product-price price-unknown">${esc(price)}</div>
      <button type="button" class="add-to-cart" data-add="${esc(p.id)}" title="Ajouter à ma sélection" aria-label="Ajouter ${esc(p.name)}"><i class="fas fa-plus"></i></button></div></div></article>`;
    }).join('');
@@ -218,8 +220,17 @@
  }
  window.toggleMenu=()=>{
    const nav=$('.nav-center');const open=nav.dataset.open!=='true';nav.dataset.open=open?'true':'false';
-   nav.style.cssText=open?'display:flex;position:absolute;top:100%;left:0;right:0;z-index:1200;background:#131313;flex-direction:column;align-items:stretch;padding:1.2rem 2rem;gap:1.25rem;border-bottom:1px solid #d4af37':' '; 
  };
+ function applyTheme(){
+   document.documentElement.dataset.theme=colorMode;
+   const button=$('#themeToggle');if(!button)return;
+   const isDay=colorMode==='day';
+   button.innerHTML=`<i class="fas ${isDay?'fa-moon':'fa-sun'}" aria-hidden="true"></i>`;
+   button.title=isDay?'Activer le mode nuit':'Activer le mode jour';
+   button.setAttribute('aria-label',button.title);
+   button.setAttribute('aria-pressed',String(isDay));
+ }
+ function toggleTheme(){colorMode=colorMode==='night'?'day':'night';save(THEME,colorMode);applyTheme();}
  window.showOwnerInfo=()=>showToast('Bienvenue chez MICKEY TECH');
  window.scrollToProducts=()=>$('#products').scrollIntoView({behavior:'smooth'});
  function updateAccountSummary(){
@@ -244,6 +255,7 @@
        case 'wishlist':toggleWishlist();break;
        case 'cart':toggleCart();break;
        case 'menu':toggleMenu();break;
+      case 'theme-toggle':toggleTheme();break;
        case 'scroll-products':scrollToProducts();break;
        case 'checkout':openCheckout();break;
       case 'account':openAccount();break;
@@ -252,7 +264,7 @@
        case 'facebook':e.preventDefault();showToast('Lien Facebook à ajouter','error');break;
      }
    });
-  loadCategoryButtons();loadBrandButtons();renderProducts();updateCartUI();
+  applyTheme();loadCategoryButtons();loadBrandButtons();renderProducts();updateCartUI();
    $('#sortSelect').addEventListener('change',e=>{currentSort=e.target.value;renderProducts();});
    [$('#productSearch'),$('#searchInput')].forEach(input=>input.addEventListener('input',e=>{search=e.target.value;const other=input.id==='searchInput'?$('#productSearch'):$('#searchInput');other.value=search;renderProducts();}));
    $('#detailClose').addEventListener('click',()=>$('#productDialog').close());
