@@ -18,6 +18,7 @@ Fichiers modifiables :
   index.html     = structure et couleurs de votre site initial + ajout de fenêtre produit
   catalogue.js   = noms, marques, descriptions et chemins des images
   app.js         = filtres, recherches, panier, fiches et interactions
+  mobile-theme.css = adaptation mobile et thèmes jour/nuit
   CREDITS_IMAGES.md = crédits des photos utilisées dans l'ancienne sélection de démonstration
 
 Pour consulter : extraire le ZIP, ouvrir index.html dans Chrome, Edge ou Firefox.

@@ -10,7 +10,7 @@ Le catalogue se filtre par type de produit et par marque. Les prix sont laissés
 
 - `catalogue.js` contient les marques, types et références.
 - `app.js` gère les filtres, recherches, panier, favoris et fiches.
-- `styles.css` contient la présentation.
+- `styles.css` contient les styles principaux; `mobile-theme.css` contient l’adaptation mobile et le thème jour/nuit.
 - `index.html` contient la structure du site.
 - `images/` accueille les photos locales de la boutique.
 
@@ -18,7 +18,9 @@ Pour ajouter un prix, ajouter une propriété `price` numérique à la fiche gé
 
 ## Déploiement
 
-GitHub Pages déploie automatiquement la branche `main` depuis GitHub Actions. Les changements poussés sur `main` mettent à jour le site.
+GitHub Pages publie automatiquement le contenu de la branche `main`, dossier racine. Les changements enregistrés sur `main` mettent à jour le site après quelques minutes.
+
+Le bouton soleil/lune dans l’en-tête alterne entre le thème jour et le thème nuit. Le choix est mémorisé dans le navigateur.
 
 ## Contact
 
